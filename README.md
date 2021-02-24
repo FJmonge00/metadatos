@@ -2,20 +2,20 @@
 
 # Exiftool
 
-### Instalar Exiftool
+## Instalar Exiftool
 
 ```bash
 apt-get install libimage-exiftool-perl
 ```
 
-### Ver Metadatos
+## Ver Metadatos
 
 ```bash
 wget https://github.com/FJmonge00/metadatos/blob/master/objetos/Ejemplo1Canarias.jpg
 exiftool Ejemplo1Canarias.jpg
 ```
 
-**Ubicación**
+### Ver Ubicación
 
 ```bash
 exiftool Ejemplo1Canarias.jpg | grep -i "GPS"
