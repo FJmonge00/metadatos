@@ -8,13 +8,35 @@
 apt-get install libimage-exiftool-perl
 ```
 
-### Instalar Exiftool
+### Ver Metadatos
 
 ```bash
-wget 
-apt-get install libimage-exiftool-perl
+wget https://github.com/FJmonge00/metadatos/blob/master/objetos/Ejemplo1Canarias.jpg
+exiftool Ejemplo1Canarias.jpg
 ```
 
-## La Foca
+*Ubicación*
 
-Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+```bash
+exiftool Ejemplo1Canarias.jpg | grep -i "GPS"
+```
+
+
+## Modificar metadatos (Copyrigh)
+
+```bash
+exiftool -exif:Copyright="www.vozidea.com" Ejemplo2.jpg
+exiftool example.jpg | grep -i Copyright
+```
+
+## Modificar fecha (Restar 1 hora)
+
+```bash
+exiftool -alldates-=1 -if '$CreateDate ge "2012-:12:13"' Ejemplo2.jpg
+```
+
+## Limpiar Metadatos
+
+```bash
+exiftool -alldates-=1 -if '$CreateDate ge "2012-:12:13"' Ejemplo2.jpg
+```
