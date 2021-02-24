@@ -1,6 +1,6 @@
-<img src="./imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" />
+<!-- <img src="./imagenes/MI-LICENCIA88x31.png" style="float: left; margin-right: 10px;" /> -->
 
-## Exiftool
+# Exiftool
 
 ### Instalar Exiftool
 
@@ -15,7 +15,7 @@ wget https://github.com/FJmonge00/metadatos/blob/master/objetos/Ejemplo1Canarias
 exiftool Ejemplo1Canarias.jpg
 ```
 
-*Ubicación*
+**Ubicación**
 
 ```bash
 exiftool Ejemplo1Canarias.jpg | grep -i "GPS"
