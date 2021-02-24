@@ -11,20 +11,21 @@ apt-get install libimage-exiftool-perl
 ## Ver Metadatos
 
 ```bash
-wget https://github.com/FJmonge00/metadatos/blob/master/objetos/Ejemplo1Canarias.jpg
-exiftool Ejemplo1Canarias.jpg
+wget https://netting.files.wordpress.com/2013/09/example.jpg
+exiftool example.jpg
 ```
 
 ### Ver Ubicación
 
 ```bash
-exiftool Ejemplo1Canarias.jpg | grep -i "GPS"
+exiftool example.jpg | grep -i "GPS"
 ```
 
 
 ## Modificar metadatos (Copyrigh)
 
 ```bash
+wget https://i.blogs.es/5efe2c/cap_001/450_1000.jpg
 exiftool -exif:Copyright="www.vozidea.com" Ejemplo2.jpg
 exiftool example.jpg | grep -i Copyright
 ```
